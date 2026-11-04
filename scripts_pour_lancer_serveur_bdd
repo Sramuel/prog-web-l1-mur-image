@@ -1,0 +1,15 @@
+Pour lancer le serveur postgre
+dans le terminal vs code
+sh start.sh
+
+puis à la fin lorsque vous avez terminé d'utiliser postgres:
+
+sh stop.sh
+
+pour lancer le client psql
+psql -d postgres
+
+pour lancer un script sql
+\i competitions-sportives.sql
+
+

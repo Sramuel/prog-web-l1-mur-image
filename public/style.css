@@ -1,0 +1,45 @@
+.centre {
+    text-align: center;
+}
+
+.droite {
+    text-align:right;
+    display: inline-block;
+    width: 45%;
+}
+
+.droite2 {
+    text-align: right;
+}
+
+.gauche {
+    text-align: left;
+    display: inline-block;
+    width: 45%;
+}
+
+#mur a {
+    display: block;
+}
+
+#mur img {
+    width: 100%;
+}
+
+@media screen and (min-width: 300px) {
+    #mur {
+        column-count: 1;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #mur {
+        column-count: 3;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #mur {
+        column-count: 5;
+    }
+}
