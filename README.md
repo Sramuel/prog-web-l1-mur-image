@@ -1,12 +1,34 @@
 # Projet de programmation web
 
-## Configuration
+Application web Node.js utilisant PostgreSQL pour gérer un mur d'images.
 
-Le serveur utilise PostgreSQL. Configure le mot de passe dans la variable d environnement avant de lancer l application :
+## Pré-requis
 
-```sh
-export PGPASSWORD="votre-mot-de-passe"
+- Node.js et npm
+- PostgreSQL
+
+## Initialiser la base
+
+Sur Linux, les scripts `start.sh` et `stop.sh` pilotent le service PostgreSQL :
+
+```bash
+./start.sh
+psql -f application-image.sql
+psql -d application_image -f auteurs.sql
+psql -d application_image -f images.sql
+```
+
+Configurez le mot de passe PostgreSQL sans le mettre dans le code :
+
+```bash
+export PGPASSWORD='votre-mot-de-passe'
+```
+
+## Installer et lancer
+
+```bash
+npm install
 npm start
 ```
 
-Les dependances sont installees avec `npm install`. Le dossier `node_modules/` n est pas versionne.
+Le serveur écoute sur <http://localhost:8090/>.
